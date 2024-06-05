@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "catetories",
+  "info": {
+    "singularName": "catetory",
+    "pluralName": "catetories",
+    "displayName": "Catetory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "description": {
+      "type": "text"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "catetory"
+    }
+  }
+}
